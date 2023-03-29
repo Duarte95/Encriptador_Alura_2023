@@ -14,7 +14,6 @@ body{
 
 main{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
     padding-bottom: 1.5rem;
@@ -26,6 +25,7 @@ header{
     grid-template-columns: 8fr 1fr;
     align-items: center;
 }
+
 .logo1{
     height: 3.125rem;
     width: auto;
@@ -38,8 +38,6 @@ header{
     width: 5rem;
     font-size: 1.25rem;
     cursor: pointer;
-    display: flex;
-    position: relative;
     vertical-align: top;
     border-radius: 1000px;
     background: #0A3871;
@@ -48,21 +46,13 @@ header{
     box-shadow: 0 0.5rem 0.9375rem -0.5rem rgb(90, 90, 90);
 }
 
-span{
-    width: 0.625rem;
-    height: 0.625rem;
-    line-height: none;
-    display: block;
-    background: none;
-    color: white;
-}
-
 /* CUADRO DE LA IZQUIERDA DONDE SE RECIBE EL MENSAJE */
 
 .cuadro1{
     margin: 0.625rem 1.25rem;
     height: 28.125rem;
-    flex-grow: 2;
+    width: 70%;
+    
 }
 
 .text-area{
@@ -73,8 +63,9 @@ span{
     border: none;
     outline: none;
     color:#0A3871;
-    width: 100%;
+    width: calc(100% - 1.4rem);
     height: 21.25rem;
+    padding: .7rem;
 }
 
 h6{
@@ -147,11 +138,15 @@ h6{
 .cuadro2{
     margin: 0.625rem 1.25rem;
     height: 28.125rem;
-    flex-grow: 1;
+    width: 30%;
     text-align: center;
     position: relative;
     /*
     vertical-align: top; era inline block y esto top es necesario*/
+}
+
+.contenedor2{
+  width: 100%;
 }
 
 .mensaje2{
@@ -161,11 +156,16 @@ h6{
     outline: none;
     border-radius: 10px;
     border-width: 3px;
-    width: 100%;
+    width: calc(100% - 1.4rem);
     height: 28.125rem;
+    padding: .7rem;
     border: none;
     box-shadow: 0 10px 20px -8px rgb(90, 90, 90);
     /*x y b s color(shadow)*/
+}
+
+.btn_copy{
+  width: 100%;
 }
 
 .copy{
@@ -173,16 +173,17 @@ h6{
     background: white;
     border-radius: 3.125rem;
     font-weight: bold;
+    font-size: 16px;
     color: #0A3871;
     border: 1px solid #0A3871;
     position: absolute;
     padding: 0.5em;
     width: 25%;
     bottom: 0.5em;
-    left: 37%
+    left: 37%;
 }
 
-/*              PIE DE PAGINA             */
+/*         PIE DE PAGINA         */
 
 .logo2{
     height: 1.875rem;
@@ -210,10 +211,47 @@ footer{
         font-size: 15px;
     }
     
+    main{
+      flex-wrap: wrap;
+      padding-bottom: .6rem;
+    }
+    
+    .logo1{
+      height: 2.185rem;
+    }
+    
+    .switch{
+      height: 1.5rem;
+      font-size: .8rem;
+      width: 4rem;
+    }
+    
+    .cuadro1{
+      width: 80%;
+      height: 16rem;
+    }
+    
+    .text-area{
+      height: 9rem;
+    }
+    
     .encryp, .desencryp{
         padding: 0.625rem;
         margin: 0.625rem;
         width: 8.5rem;
+    }
+    
+    .cuadro2{
+      width: 80%;
+      height: 12rem;
+    }
+    
+    .mensaje2{
+      height: 10rem;
+    }
+    
+    footer{
+      font-size: .8rem;
     }
     
 }

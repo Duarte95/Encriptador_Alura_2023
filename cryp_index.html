@@ -14,33 +14,37 @@
 
     <header>
         <img src="images/Logo.svg" alt="Logo" class="logo1"><!--Agregar Logo Alura/fenoxs-->
-        <button class="switch" id="switch">
-            <span class="">al</span> <!--logo alura-->
-            <span class="">eg</span>
-            <!--logo enigma-->
-        </button>
+        <button class="switch">enigma</button>
     </header>
 
     <main>
         <section class="cuadro1">
-            <textarea class="text-area" name="mensaje" required placeholder=" Mensaje..."></textarea>
+          <div class="contenedor1">
+            
+            <textarea class="text-area" name="mensaje" required placeholder="Mensaje..." data-mensaje-recibir></textarea>
             
             <div class="regla">
                 <h6>Solo letras minusculas y sin acentos.</h6>
             </div>
         
             <div class="botones">
-                <button class="encryp" onclick="encriptar" >Encriptar</button>
-                <button class="desencryp" onclick="desencriptar">Desencriptar</button>
+                <button class="encryp" onclick="encriptar()"  data-btn-encriptar>Encriptar</button>
+                <button class="desencryp" onclick="desencriptar()" data-btn-desencriptar>Desencriptar</button>
             </div>
+            
+          </div>
         </section>
 
         <section class="cuadro2">
-            <textarea class="mensaje2" readonly></textarea>
+          <div class="contenedor2">
             
-            <div>
-                <button class="copy" onclick="copiar">Copiar</button>
+            <textarea class="mensaje2" readonly data-mensaje-entregar></textarea>
+            
+            <div class="btn_copy">
+                <button class="copy" onclick="copiar()" data-btn-copiar>Copiar</button>
             </div>
+            
+          </div>
         </section>
     </main>
 
