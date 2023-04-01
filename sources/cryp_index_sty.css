@@ -16,10 +16,28 @@ main{
     display: flex;
     justify-content: center;
     justify-items: center;
+    flex-wrap: wrap;
 }
 
 .espacio{
     padding-bottom: 1.5rem;
+}
+
+.enigma{
+  width: 100%;
+}
+
+.contenedor0{
+  display: flex;
+  justify-content: space-around;
+}
+
+.code{
+  width: 1rem;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  outline-color: #0A3871;
 }
 
 header{
@@ -70,6 +88,14 @@ header{
     height: 21.25rem;
     padding: .7rem;
 }
+
+/*textarea:invalid{
+  box-shadow: 0 0 .8rem red;
+}*/
+
+/*textarea:required{
+  box-shadow: 0 0 .8rem blue;
+}*/
 
 h6{
     font-size: 0.9375rem;
@@ -176,8 +202,7 @@ h6{
     background: white;
     border-radius: 3.125rem;
     font-weight: bold;
-    font-size: 16px;
-    
+    font-size: .8rem;
     color: #0A3871;
     border: 1px solid #0A3871;
     position: absolute;
