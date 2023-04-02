@@ -1,92 +1,106 @@
-*{
-    font-size: 20px;
+* {
+  font-size: 20px;
+  /*segun defini el valor global en 20px, pero en textos el rem es 16 y no 20, pero con em textos si son 20px*/
 }
 
-html{
-    height: 100%;
-    margin: 0;
+html {
+  height: 100%;
+  margin: 0;
 }
 
-body{
-    min-height: 100vh;
-    background: #F3F5FC;
+body {
+  min-height: 100vh;
+  background: #f3f5fc;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-wrap: wrap;
-}
-
-.espacio{
-    padding-bottom: 1.5rem;
-}
-
-.enigma{
-  width: 100%;
-}
-
-.contenedor0{
+main,
+.encriptador {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  justify-items: center;
+  height: auto;
 }
 
-.code{
-  width: 1rem;
+main {
+  flex-wrap: wrap;
+}
+
+.enigma {
+  width: 100%;
+  margin: 1rem;
+}
+
+.encriptador {
+  width: 100%;
+  height: 100%;
+}
+
+.espacio {
+  padding-bottom: 1.5rem;
+}
+
+.contenedor0 {
+  display: none;
+  /*display: flex;
+  justify-content: space-around;*/
+}
+
+.code {
+  width: 1.5rem;
+  font-size: 1.5rem;
   text-align: center;
+  border: 2px solid #0a3871;
   border-radius: 3px;
-  border: none;
-  outline-color: #0A3871;
+  outline-color: darkgreen;
+  padding: .5rem;
 }
 
-header{
-    text-align: center;
-    display: grid;
-    grid-template-columns: 8fr 1fr;
-    align-items: center;
+header {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  align-items: center;
 }
 
-.logo1{
-    height: 3.125rem;
-    width: auto;
-    margin: 1.25rem 0 1.25rem 1.25rem;
+.logo1 {
+  height: 3.125rem;
+  width: auto;
+  margin: 1.25rem 0 1.25rem 1.25rem;
 }
 
-.switch{
-    margin: 1.25rem 1.25rem 1.25rem 0;
-    height: 1.875rem;
-    width: 5rem;
-    font-size: 1.25rem;
-    cursor: pointer;
-    vertical-align: top;
-    border-radius: 1000px;
-    background: #0A3871;
-    color: white;
-    border: 2px solid white;
-    box-shadow: 0 0.5rem 0.9375rem -0.5rem rgb(90, 90, 90);
+.switch {
+  margin: 1.25rem 1.25rem 1.25rem 0;
+  height: 1.875rem;
+  width: 5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  vertical-align: top;
+  border-radius: 1000px;
+  background: #0a3871;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 0.5rem 0.9375rem -0.5rem rgb(90, 90, 90);
 }
 
 /* CUADRO DE LA IZQUIERDA DONDE SE RECIBE EL MENSAJE */
 
-.cuadro1{
-    margin: 0.625rem 1.25rem;
-    height: 28.125rem;
-    width: 70%;
-    
+.cuadro1 {
+  margin: 0.625rem 1.25rem;
+  height: 30rem;
+  width: 70%;
 }
 
-.text-area{
-    background-color: rgba(255, 255, 255, 0.377);
-    border-radius: 0.9375rem;
-    overflow:visible;
-    resize: none;
-    border: none;
-    outline: none;
-    color:#0A3871;
-    width: calc(100% - 1.4rem);
-    height: 21.25rem;
-    padding: .7rem;
+.text-area {
+  background-color: rgba(255, 255, 255, 0.377);
+  border-radius: 0.9375rem;
+  overflow: visible;
+  resize: none;
+  border: none;
+  outline: none;
+  color: #0a3871;
+  width: calc(100% - 1.4rem);
+  height: 21.25rem;
+  padding: 0.7rem;
 }
 
 /*textarea:invalid{
@@ -97,195 +111,202 @@ header{
   box-shadow: 0 0 .8rem blue;
 }*/
 
-h6{
-    font-size: 0.9375rem;
-    opacity: 80%;
-    color: #495057;
-    text-align: center;
-    margin: 10px 10px;
-}/*necesario para que el texto se ajuste*/
+.regla {
+  font-size: 1em;
+  opacity: 80%;
+  color: #495057;
+  text-align: center;
+  margin: 10px 10px;
+} /*necesario para que el texto se ajuste*/
 
-.botones{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.botones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.encryp{
-    background: #0A3871;
-    color: white;
-    font-weight: bold;
-    border: none;
+.encryp {
+  background: #0a3871;
+  color: white;
+  font-weight: bold;
+  border: none;
 }
 
-.desencryp{
-    background: #D8DFE8;
-    color: #0A3871;
-    font-weight: bold;
-    border: 1px solid #0A3871;
+.desencryp {
+  background: #d8dfe8;
+  color: #0a3871;
+  font-weight: bold;
+  border: 1px solid #0a3871;
 }
 
-.encryp, .desencryp{
-    padding: .5em;
-    margin: .5em;
-    width: 12.5rem;
-    border-radius: 1.875rem;
+.encryp,
+.desencryp {
+  padding: 0.5em;
+  margin: .5em 0.5em 0.2em 0.5em;
+  width: 12.5rem;
+  border-radius: 1.875rem;
 }
 
 /*    Estilos de boton interactivos  */
 
-.encryp:hover, .desencryp:hover, .copy:hover{
-    box-shadow: 0 0 .8rem #0A3871;
-    cursor: pointer;
+.encryp:hover,
+.desencryp:hover,
+.copy:hover {
+  box-shadow: 0 0 0.8rem #0a3871;
+  cursor: pointer;
 }
 
-.encryp:active{
-    box-shadow: 0 0 1.25rem white;
-    background: #0e59b4;
-    transform: scale(.95);
-    animation: 1s;
+.encryp:active {
+  box-shadow: 0 0 1.25rem white;
+  background: #0e59b4;
+  transform: scale(0.95);
+  animation: 1s;
 }
 
-.desencryp:active{
-    box-shadow: 0 0 1.25rem white;
-    background: #8c8f94;
-    color: white;
-    transform: scale(.95);
-    animation: 1s;
+.desencryp:active {
+  box-shadow: 0 0 1.25rem white;
+  background: #8c8f94;
+  color: white;
+  transform: scale(0.95);
+  animation: 1s;
 }
 
-.copy:active{
-    box-shadow: 0 0 1.25rem white;
-    background: #0e59b4;
-    transform: scale(.95);
-    animation: 1s;
-    color: white;
+.copy:active {
+  box-shadow: 0 0 1.25rem white;
+  background: #0e59b4;
+  transform: scale(0.95);
+  animation: 1s;
+  color: white;
 }
 
 /* CUADRO DE LA DERECHA DONDE SE DECIFRA EL MENSAJE */
 
-.cuadro2{
-    margin: 0.625rem 1.25rem;
-    height: 28.125rem;
-    width: 30%;
-    text-align: center;
-    position: relative;
-    /*
+.cuadro2 {
+  margin: 0.625rem 1.25rem;
+  height: 30rem;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  /*
     vertical-align: top; era inline block y esto top es necesario*/
 }
 
-.contenedor2{
+.mensaje2 {
+  overflow: visible;
+  resize: none;
+  background: white;
+  outline: none;
+  border-radius: 10px;
+  border-width: 3px;
+  width: calc(100% - 1.4rem);
+  height: 28.125rem;
+  padding: 0.7rem;
+  border: none;
+  box-shadow: 0 10px 20px -8px rgb(90, 90, 90);
+  /*x y b s color(shadow)*/
+}
+
+.btn_copy {
   width: 100%;
+  position: absolute;
+  bottom: 0.5rem;
 }
 
-.mensaje2{
-    overflow: visible;
-    resize: none;
-    background: white;
-    outline: none;
-    border-radius: 10px;
-    border-width: 3px;
-    width: calc(100% - 1.4rem);
-    height: 28.125rem;
-    padding: .7rem;
-    border: none;
-    box-shadow: 0 10px 20px -8px rgb(90, 90, 90);
-    /*x y b s color(shadow)*/
-}
-
-.btn_copy{
-  width: 100%;
-}
-
-.copy{
-    margin: 0.625rem;
-    background: white;
-    border-radius: 3.125rem;
-    font-weight: bold;
-    font-size: .8rem;
-    color: #0A3871;
-    border: 1px solid #0A3871;
-    position: absolute;
-    padding: 0.5em;
-    width: 25%;
-    min-width: 80px;
-    max-width: 130px;
-    bottom: 0.5em;
-    left: 37%;
+.copy {
+  margin: 0.625rem;
+  background: white;
+  border-radius: 3.125rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+  padding: 0.5rem;
+  width: 25%;
+  min-width: 80px;
+  max-width: 130px;
 }
 
 /*         PIE DE PAGINA         */
 
-.logo2{
-    height: 1.875rem;
-    width: auto;
-    margin: 0.625rem;
-    padding-bottom: 0px;
+.logo2 {
+  height: 1.875rem;
+  width: auto;
+  margin: 0.625rem;
+  padding-bottom: 0px;
 }
 
-footer > p{
-    padding-bottom: 0.625rem;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    margin: 0 .625rem 0 .625rem;
+footer > p {
+  padding-bottom: 0.625rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 0.625rem 0 0.625rem;
 }
 
-footer{
-    text-align: center;
-    background: #0A3871;
+footer {
+  text-align: center;
+  background: #0a3871;
+  height: auto;
 }
 
-@media screen and (max-width: 720px){
-    
-    *{
-        font-size: 15px;
-    }
-    
-    main{
-      flex-wrap: wrap;
-    }
+@media screen and (max-width: 720px) {
+  * {
+    font-size: 15px;
+  }
 
-    .espacio{
-        padding-bottom: .6rem;
-    }
-    
-    .logo1{
-      height: 2.185rem;
-    }
-    
-    .switch{
-      height: 1.5rem;
-      font-size: .8rem;
-      width: 4rem;
-    }
-    
-    .cuadro1{
-      width: 80%;
-      height: 16rem;
-    }
-    
-    .text-area{
-      height: 9rem;
-    }
-    
-    .encryp, .desencryp{
-        padding: 0.625rem;
-        margin: 0.625rem;
-        width: 8.5rem;
-    }
-    
-    .cuadro2{
-      width: 80%;
-      height: 12rem;
-    }
-    
-    .mensaje2{
-      height: 10rem;
-    }
-    
-    footer{
-      font-size: .8rem;
-    }
-    
+  main,
+  .encriptador {
+    flex-wrap: wrap;
+  }
+
+  .espacio {
+    padding-bottom: 0.6rem;
+  }
+
+  .logo1 {
+    height: 2.185rem;
+  }
+
+  .switch {
+    height: 1.5rem;
+    font-size: 0.8rem;
+    width: 4rem;
+  }
+
+  .cuadro1 {
+    width: 80%;
+    height: 16rem;
+  }
+
+  .btn_copy {
+    bottom: 5%;
+  }
+
+  .text-area {
+    height: 9rem;
+  }
+
+  .regla{
+    margin: .5rem;
+  }
+
+  .encryp,
+  .desencryp {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 8.5rem;
+  }
+
+  .cuadro2 {
+    width: 80%;
+    height: 12rem;
+  }
+
+  .mensaje2 {
+    height: 10rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
