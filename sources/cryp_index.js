@@ -8,6 +8,7 @@ function encriptar(resultado) {
     const encripta = document.querySelector("[data-mensaje-recibir]").value;
     const encriptado = encripta.replace(/e/gi, 'enter').replace(/i/gi, 'imes').replace(/a/gi, 'ai').replace(/o/gi, 'ober').replace(/u/gi, 'ufat');
     document.querySelector("[data-mensaje-entregar]").value = encriptado;
+    document.getElementById("mensaje2").style.backgroundImage = "none";
 }
 
 
@@ -15,6 +16,7 @@ function desencriptar(resultado){
     const desencripta= document.querySelector("[data-mensaje-recibir]").value;
     const desencriptado= desencripta.replace(/ai/gi, 'a').replace(/enter/gi, 'e').replace(/imes/gi, 'i').replace(/ober/gi, 'o').replace(/ufat/gi, 'u');
     document.querySelector("[data-mensaje-entregar]").value = desencriptado;
+    document.getElementById("mensaje2").style.backgroundImage = "none";
 }
 
 function copiar(){
