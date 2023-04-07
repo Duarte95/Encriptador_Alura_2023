@@ -41,8 +41,6 @@ main {
 
 .contenedor0 {
   display: none;
-  /*display: flex;
-  justify-content: space-around;*/
 }
 
 .code {
@@ -123,7 +121,9 @@ header {
   color: #495057;
   text-align: center;
   margin: 10px 10px;
-} /*necesario para que el texto se ajuste*/
+}
+
+/*necesario para que el texto se ajuste*/
 
 .botones {
   width: 100%;
@@ -248,7 +248,7 @@ header {
   padding-bottom: 0px;
 }
 
-footer > p {
+footer>p {
   padding-bottom: 0.625rem;
   text-align: center;
   color: white;
@@ -299,7 +299,7 @@ footer {
     height: 9rem;
   }
 
-  .regla{
+  .regla {
     margin: .5rem;
   }
 
