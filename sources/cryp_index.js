@@ -46,16 +46,22 @@ function desencriptar(resultado) {
 
 function copiar() {
   const copyText = document.querySelector("[data-mensaje-entregar]");
+  if (copyText.value == '' ){
+    alert ("No hay nada para copiar");
+  }else {
   copyText.select();
   document.execCommand("copy");
   document.querySelector("[data-mensaje-entregar]").value = "";
   pantalla();
+  }
 }
 
 function modo_enigma(){
   const enigma = document.querySelector(".contenedor0");
+  const cuerpo = document.querySelector(".cuerpo");
   enigma.style.display = "flex";
   enigma.style.justifyContent = "space-around";
+  cuerpo.style.background = "#202123";
 }
 
 /************ nuevo code ************/
@@ -70,6 +76,9 @@ const alfabeto3 = ["a", "e", "i", "o", "u", "y", "s", "z", "c", "x", "w", "b", "
 
 const alfabeto4 = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "ñ", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"];
 
+const codificado = [alfabeto, alfabeto1, alfabeto2, alfabeto3, alfabeto4];
+
 function enigma() {
   console.log("escribe aqui la función");
 }
+
