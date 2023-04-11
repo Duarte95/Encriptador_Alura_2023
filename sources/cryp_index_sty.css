@@ -211,13 +211,22 @@ header {
   box-shadow: 0 10px 20px -8px rgb(90, 90, 90);
   background-image: url(/images/1.png);
   background-repeat: no-repeat;
+  background-position: center; /*centro o ajusto la imagen*/
+  background-size: contain;  /*contain tamaño original, cover, ocupa todo el espacio y width% heigth% (o pixelexs, rems)*/
   /*x y b s color(shadow)*/
 }
 
-.picture {
+.interno {
   position: absolute;
   width: 100%;
+  bottom: 2rem;
+  font-weight: bold;
 }
+
+/*.picture {
+  position: absolute;
+  width: 100%;
+}*/
 
 .btn_copy {
   width: 100%;

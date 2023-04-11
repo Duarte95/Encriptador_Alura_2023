@@ -15,8 +15,10 @@ console.log(document.querySelector("[data-rodapie]").style.height.value);*/
 
 function pantalla(){
   const mostrar = document.querySelector("[data-mensaje-entregar]").value;
+  const texto =  document.querySelector("[data-mensaje-entregar]").value;
   if (mostrar != ''){
     document.querySelector(".mensaje2").style.backgroundImage = "none";
+    
   }else {
     document.querySelector(".mensaje2").style.backgroundImage = "url(/images/1.png)";
   }
