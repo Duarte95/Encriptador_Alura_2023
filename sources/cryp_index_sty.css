@@ -217,6 +217,7 @@ header {
 }
 
 .interno {
+  display: none;
   position: absolute;
   width: 100%;
   bottom: 2rem;
